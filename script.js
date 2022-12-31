@@ -1,7 +1,7 @@
 console.log("Welcome to Tic Tac Toe");
-let bgMusic = new Audio("music.mp3");
-let audioturn = new Audio("ting.mp3");
-let gameOver = new Audio("gameover.mp3");
+let bgMusic = new Audio("/Images_and_sounds/music.mp3");
+let audioturn = new Audio("/Images_and_sounds/ting.mp3");
+let gameOver = new Audio("/Images_and_sounds/gameover.mp3");
 const tiles = Array.from(document.querySelectorAll(".box"));
 const resetButton = document.getElementById("reset");
 const playersTurn = document.querySelector(".info");
