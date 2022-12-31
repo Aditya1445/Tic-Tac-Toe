@@ -1,0 +1,113 @@
+ @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: rgb(121,24,124);
+    color:white;
+    height:70px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding:0 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul{
+    list-style: none;
+}
+.container{
+    /* background-color: yellow; */
+    display:flex;
+    justify-content: center;
+    margin-top:50px;
+}
+
+.game-container{
+    display:grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: 'Roboto', 'sans-serif';
+    position: relative;
+}
+.disableGrid{
+    pointer-events: none;
+}
+.box{
+    border:2px solid black;
+    font-size:8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(231, 206, 255);
+}
+.info{
+    font-size: 22px;
+}
+.game-info{
+    padding: 0 34px;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.game-info h2{
+    font-size: 2.5rem;
+}
+.imgbox img{
+    width:0;
+    transition: width 1s ease-in-out
+}
+
+/* Remove the left right top and bottom borders */
+.border-top{
+    border-top: 0;
+}
+.border-left{
+    border-left:0;
+}
+.border-right{
+    border-right:0;
+}
+.border-bottom{
+    border-bottom:0
+}
+/* Reset button */
+#reset{
+    margin:0 23px;
+    padding:1px 18px;
+    background:rgb(255, 213, 255);
+    border-radius:6px;
+    cursor: pointer;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 15px;
+    font-weight:bolder;
+}
+.line{
+    background-color: black;
+    width:0vw;
+    height: 3px;
+    position: absolute;
+    background-color: rgb(121,24,124);
+    transition: width 1s ease-in-out;
+    
+}
+/* Media queries */
+@media screen and (max-width: 700px){
+    .container{
+        flex-wrap: wrap;
+    }
+    .game-info{
+        margin-top: 34px;
+    }
+    .game-info h2{
+        font-size: 1.5rem;
+    }
+    .game-container{
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+    }
+}
